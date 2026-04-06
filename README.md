@@ -7,6 +7,7 @@ olduğunu makine öğrenmesi ile tahmin etmek (İkili Sınıflandırma).
 ## Veri Seti
 - **Ad:** Netflix Movies and TV Shows
 - **Kaynak:** https://www.kaggle.com/datasets/shivamb/netflix-shows
+- **Notebook:** https://www.kaggle.com/code/kardelentula/netflix-eda
 - **Satır Sayısı:** 8804
 - **Sütun Sayısı:** 14
 
