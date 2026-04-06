@@ -1,20 +1,25 @@
-# Netflix EDA - İçerik Türü Sınıflandırması
+ Netflix Veri Analizi (Vize Ödevi)
+Bu proje, Netflix platformundaki film ve dizilerin dağılımını incelediğim bir Keşifsel Veri Analizi (EDA) çalışmasıdır.
 
-## Proje Amacı
-Netflix platformundaki bir içeriğin "Movie" mi yoksa "TV Show" mu 
-olduğunu makine öğrenmesi ile tahmin etmek (İkili Sınıflandırma).
+Proje Hakkında
+Bu çalışmada, ham veriyi analiz edilebilir hale getirmek için temizleme ve görselleştirme adımlarını uyguladım. Temel amacım, Netflix kütüphanesindeki içerik trendlerini anlamaktır.
 
-## Veri Seti
-- **Ad:** Netflix Movies and TV Shows
-- **Kaynak:** https://www.kaggle.com/datasets/shivamb/netflix-shows
-- **Notebook:** https://www.kaggle.com/code/kardelentula/netflix-eda
-- **Satır Sayısı:** 8804
-- **Sütun Sayısı:** 14
+ Neler Yaptım?
+Veri Temizleme: Eksik verileri analiz edip uygun değerlerle (Bilinmiyor vb.) doldurdum.
 
-## Yapılan İşlemler
-- Eksik veri analizi ve temizleme
-- Görselleştirme (4 grafik)
-- Hedef değişken: type (Movie / TV Show)
+Görselleştirme: Matplotlib ve Seaborn kullanarak içerik türlerini, üretim yapan ilk 10 ülkeyi ve izleyici kitlesi dağılımını grafiklere döktüm.
 
-## Kullanılan Kütüphaneler
-- pandas, numpy, matplotlib, seaborn
+Özellik Çıkarımı: Eklenme tarihlerinden yıl bilgilerini ayıklayarak analizimi detaylandırdım.
+
+ Kullanılan Araçlar
+Dil: Python
+
+Kütüphaneler: Pandas, Numpy, Matplotlib, Seaborn
+
+Platform: Kaggle
+
+Notebook:https://www.kaggle.com/code/kardelentula/netflix-eda
+
+Kaynak:https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+Not: Bu proje akademik bir vize ödevi çalışmasıdır
