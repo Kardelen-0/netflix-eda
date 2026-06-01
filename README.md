@@ -1,25 +1,62 @@
- Netflix Veri Analizi (Vize Ödevi)
-Bu proje, Netflix platformundaki film ve dizilerin dağılımını incelediğim bir Keşifsel Veri Analizi (EDA) çalışmasıdır.
+# Netflix İçerik Sınıflandırma Projesi (Vize & Final Ödevi)
 
-Proje Hakkında
-Bu çalışmada, ham veriyi analiz edilebilir hale getirmek için temizleme ve görselleştirme adımlarını uyguladım. Temel amacım, Netflix kütüphanesindeki içerik trendlerini anlamaktır.
+Bu proje, Netflix platformundaki film ve dizilerin analizini ve makine öğrenmesi
+ile sınıflandırılmasını kapsayan uçtan uca bir çalışmadır.
 
- Neler Yaptım?
-Veri Temizleme: Eksik verileri analiz edip uygun değerlerle (Bilinmiyor vb.) doldurdum.
+---
 
-Görselleştirme: Matplotlib ve Seaborn kullanarak içerik türlerini, üretim yapan ilk 10 ülkeyi ve izleyici kitlesi dağılımını grafiklere döktüm.
+## Projenin Amacı
 
-Özellik Çıkarımı: Eklenme tarihlerinden yıl bilgilerini ayıklayarak analizimi detaylandırdım.
+Netflix veri seti üzerinde önce keşifsel veri analizi (EDA) yapılmış, ardından
+bir içeriğin **Film mi yoksa Dizi mi** olduğunu tahmin eden bir sınıflandırma
+modeli kurulmuştur.
 
- Kullanılan Araçlar
-Dil: Python
+---
 
-Kütüphaneler: Pandas, Numpy, Matplotlib, Seaborn
+## Neler Yapıldım?
 
-Platform: Kaggle
+### Aşama 1 & 2 — Veri Analizi ve Ön İşleme (Vize)
+- Eksik verileri analiz edip uygun değerlerle doldurdum
+- Matplotlib ve Seaborn ile içerik türleri, üretim yapan ilk 10 ülke
+  ve izleyici kitlesi dağılımını görselleştirdim
+- Eklenme tarihlerinden yıl bilgilerini ayıklayarak yeni özellikler türettim
 
-Notebook:https://www.kaggle.com/code/kardelentula/netflix-eda
+### Aşama 3 — Model Kurma (Final)
+- **Hedef değişken:** `type` (Movie = 1, TV Show = 0)
+- Kullanılan özellikler: `release_year`, `duration_val`, `genre_count`, `rating_enc`
+- Kurulan modeller:
+  - Karar Ağacı (Decision Tree)
+  - Rastgele Orman (Random Forest)
 
-Kaynak:https://www.kaggle.com/datasets/shivamb/netflix-shows
+### Aşama 4 — Model Değerlendirme (Final)
+- Metrikler: Accuracy, Precision, Recall, F1 Skoru
+- Confusion Matrix görselleştirmeleri
+- Model karşılaştırması ve özellik önem analizi
 
-Not: Bu proje akademik bir vize ödevi çalışmasıdır
+---
+
+## Sonuçların Değerlendirilmesi
+
+İki model karşılaştırıldığında **Random Forest**, Karar Ağacı'na kıyasla daha
+yüksek Accuracy ve F1 Skoru elde etmiştir. `duration_val` (içerik süresi)
+en belirleyici özellik olarak öne çıkmıştır; filmler dizilere göre çok daha
+uzun süreye sahip olduğundan model bu özelliği güçlü biçimde kullanmaktadır.
+
+---
+
+## Kullanılan Araçlar
+
+- **Dil:** Python  
+- **Kütüphaneler:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn  
+- **Platform:** Kaggle  
+
+---
+
+## Bağlantılar
+
+- 📓 Notebook: https://www.kaggle.com/code/kardelentula/netflix-eda  
+- 📦 Veri Seti: https://www.kaggle.com/datasets/shivamb/netflix-shows  
+
+---
+
+*Bu proje akademik bir vize & final ödevi çalışmasıdır.*
