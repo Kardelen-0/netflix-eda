@@ -13,7 +13,7 @@ modeli kurulmuştur.
 
 ---
 
-## Neler Yapıldım?
+## Neler Yaptım?
 
 ### Aşama 1 & 2 — Veri Analizi ve Ön İşleme (Vize)
 - Eksik verileri analiz edip uygun değerlerle doldurdum
